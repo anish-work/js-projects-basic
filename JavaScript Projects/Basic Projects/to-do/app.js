@@ -24,7 +24,7 @@ function loadEventListeners(){
 //GET TASKS from LS
 function getTasks(){
     let tasks;
-    if(localStorage.getItem('tasks') == null){
+    if(localStorage.getItem('tasks') === null){
         tasks = [];
     }
     else {

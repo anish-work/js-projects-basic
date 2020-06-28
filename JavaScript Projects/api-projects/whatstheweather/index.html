@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
+    <title>What's The Weather</title>
+    <style>
+        body{
+            background-color: rgb(87, 87, 87);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto bg-primary text-center mt-5 p-5 rounded">
+                <h1 id="w-location"></h1>
+                <h3 id="w-desc" class="text-dark"></h3>
+                <h3 id="w-string"></h3>
+                <img id="w-icon">
+                <ul class="list-group">
+                    <li class="list-group-item" id="w-humidity"></li>
+                    <li class="list-group-item" id="w-feelslike"></li>
+                    <li class="list-group-item" id="w-wind"></li>
+                </ul>
+
+                <button type="button" class="btn btn-secondary mt-3" data-toggle="modal" data-target="#w-changelocation" >
+                    Change Location
+                  </button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="w-changelocation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Change Location</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form >
+                  <label for="city">Enter City</label>
+                  <input type="text" id="w-city" class="form-control">
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="save">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+ integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
+integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+<script src="storage.js"></script>
+<script src="weather.js"></script>
+<script src="ui.js"></script>
+<script src="app.js"></script>
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA51DHapyHO1NfNCq8C-XWpNBlvXz7_k7M&libraries=places&callback=activateCitySuggest"></script>
+</body>
+</html>

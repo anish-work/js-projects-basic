@@ -12,9 +12,6 @@ class Weather {
          return data;
        
     }
-
-
-
     changeLocation(city){
         this.city = city;
     }

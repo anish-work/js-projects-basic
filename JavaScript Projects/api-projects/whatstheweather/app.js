@@ -3,6 +3,8 @@ const storage = new Storage;
 const weatherLocation = storage.getLocationData();
 const weather = new Weather(weatherLocation.city);
 
+// const autoComplete = new AutoComplete;
+
 
 const ui = new UI;
 
@@ -10,11 +12,8 @@ document.addEventListener('DOMContentLoaded', getWeather)
 
 document.getElementById('save').addEventListener('click', changeLocation)
 
-function activateCitySuggest(){
-    const cityInput = document.getElementById('w-city');
-    const autoComplete = new google.maps.places.Autocomplete(cityInput);
 
-}
+
 function changeLocation(){
  
     const newCity = document.getElementById('w-city').value;

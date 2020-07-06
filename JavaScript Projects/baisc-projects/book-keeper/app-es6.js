@@ -81,9 +81,7 @@ class Store{
 
          books.forEach(function(book){
              const ui = new UI;
-
-             //Add book tp ui
-
+             //Add book to ui
              ui.addBookToList(book);
          })
  
@@ -91,9 +89,7 @@ class Store{
  
      static addBook(book){
          const books = Store.getBooks();
- 
-         books.push(book)
- 
+         books.push(book);
          localStorage.setItem('books', JSON.stringify(books))
  
  
